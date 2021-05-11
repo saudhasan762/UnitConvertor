@@ -119,3 +119,36 @@ function calculateLength(option,typeofinput, input) {
     setResultValue(result, typeofinput);
 }
 
+function calculateArea(option,typeofinput, input) {
+    var result;
+    switch (option) {
+        case "Square Inch-Square Foot":
+            result = input * 144;
+            break;
+        case "Square Inch-Square Meter":
+            result = input * 0.00064516;
+            break;
+        case "Square Inch-Square Inch":
+            result = input;
+            break;
+        case "Square Meter-Square Foot":
+            result = input * 10.7639;
+            break;
+        case "Square Meter-Square Meter":
+            result = input;
+            break;
+        case "Square Meter-Square Inch":
+            result = input * 1550;
+            break;
+        case "Square Foot-Square Inch":
+            result = input * 144;
+            break;
+        case "Square Foot-Square Foot":
+            result = input;
+            break;
+        case "Square Foot-Square Meter":
+            result = input * 0.092903;
+            break;
+    }
+    setResultValue(result, typeofinput);
+}
