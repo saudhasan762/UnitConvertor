@@ -152,3 +152,37 @@ function calculateArea(option,typeofinput, input) {
     }
     setResultValue(result, typeofinput);
 }
+
+function calculateTemperature(option,typeofinput, input) {
+    var result;
+    switch (option) {
+        case "Celcius-Fahrenheit":
+            result = (input * (9 / 5)) + 32;
+            break;
+        case "Celcius-Kelvin":
+            result = input + 273.15;
+            break;
+        case "Celcius-Celcius":
+            result = input;
+            break;
+        case "Fahrenheit-Celcius":
+            result = (input - 32) * (5 / 9);
+            break;
+        case "Fahrenheit-Fahrenheit":
+            result = input;
+            break;
+        case "Fahrenheit-Kelvin":
+            result = (input - 32) * (5 / 9) + 273.15;
+            break;
+        case "Kelvin-Fahrenheit":
+            result = (input - 273.15) * (9 / 5) + 32;
+            break;
+        case "Kelvin-Celcius":
+            result = input - 273.15;
+            break;
+        case "Kelvin-Kelvin":
+            result = input;
+            break;
+    }
+    setResultValue( result, typeofinput);
+}
