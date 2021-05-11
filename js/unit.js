@@ -82,3 +82,40 @@ function setResultValue(result1,typeofinput){
     }
 }
 
+function calculateLength(option,typeofinput, input) {
+    var result;
+    switch (option) {
+        case "Meter-Kilometer":
+            result = Number(input) * 0.001;
+            break;
+        case "Meter-Centimeter":
+            result = Number(input) * 100;
+            break;
+        case "Meter-Meter":
+            result = input;
+            break;
+        case "Centimeter-Centimeter":
+            result = input;
+            break;
+        case "Centimeter-Kilometer":
+            result = Number(input) * 0.00001;
+            break;
+        case "Centimeter-Meter":
+            result = Number(input) * 0.01;
+            break;
+        case "Kilometer-Kilometer":
+            result = input;
+            break;
+        case "Kilometer-Meter":
+            result = Number(input) * 1000;
+            break;
+        case "Kilometer-Centimeter":
+            result = Number(input) * 100000;
+            break;
+    
+    }
+    // console.log("line 110",result);
+    // console.log(typeofinput);
+    setResultValue(result, typeofinput);
+}
+
